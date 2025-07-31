@@ -25,28 +25,28 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "หน้าหลัก",
+          title: "Home",
           tabBarIcon: ({ color }) => <Scan size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
-          title: "อาการแพ้ของฉัน",
+          title: "My Allergies",
           tabBarIcon: ({ color }) => <User size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="guide"
         options={{
-          title: "อาการ",
+          title: "Symptoms",
           tabBarIcon: ({ color }) => <AlertCircle size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
-          title: "การตั้งค่า",
+          title: "Settings",
           tabBarIcon: ({ color }) => <Settings size={24} color={color} />,
         }}
       />
