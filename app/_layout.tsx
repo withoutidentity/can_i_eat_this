@@ -24,7 +24,7 @@ function RootLayoutNav() {
       },
     }}>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="scanner" options={{ title: "Scan Product" }} />
+      <Stack.Screen name="scanner" options={{ title: "ถ่ายสินค้า" }} />
       <Stack.Screen name="product/[id]" options={{ title: "Product Details" }} />
       <Stack.Screen name="symptoms" options={{ title: "Allergy Symptoms" }} />
       <Stack.Screen name="symptom/[allergen]" options={{ title: "Symptoms" }} />
