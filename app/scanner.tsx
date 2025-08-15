@@ -91,13 +91,13 @@ export default function ScannerScreen() {
             <View style={styles.cornerBottomRight} />
           </View>
           
-          <Text style={styles.instructions}>
-            Position the barcode within the frame to scan
-          </Text>
+            <Text style={styles.instructions}>
+            กรุณาถ่ายภาพสินค้าในพื้นที่ที่มีแสงสว่างเพียงพอ{'\n'}เพื่อให้เห็นรายละเอียดชัดเจนครับ
+            </Text>
           
           <View style={styles.buttonContainer}>
             <Button
-              title="Flip Camera"
+              title="สลับกล้อง"
               onPress={toggleCameraFacing}
               variant="outline"
               style={styles.flipButton}
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   instructions: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 14,
     textAlign: 'center',
     marginBottom: 30,
   },
