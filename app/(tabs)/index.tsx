@@ -26,19 +26,19 @@ export default function HomeScreen() {
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       <View style={styles.header}>
         <Text style={styles.title}>Can I Eat This?</Text>
-        <Text style={styles.subtitle}>Scan food products to check for allergens</Text>
+        <Text style={styles.subtitle}>ถ่ายรูปอาหารเพื่อตรวจสอบว่ามีสารก่อภูมิแพ้หรือไม่</Text>
       </View>
 
       {isFirstLaunch ? (
         <View style={styles.welcomeCard}>
           <View style={styles.welcomeContent}>
             <AlertCircle size={32} color={Colors.primary} />
-            <Text style={styles.welcomeTitle}>Welcome!</Text>
+            <Text style={styles.welcomeTitle}>ยินดีต้อนรับ!</Text>
             <Text style={styles.welcomeText}>
-              To get started, please set up your allergy profile so we can help you identify safe foods.
+              เริ่มต้นใช้งานโดยตั้งค่าข้อมูลอาการแพ้ของคุณ เพื่อให้เราสามารถช่วยคุณระบุอาหารที่ปลอดภัยสำหรับคุณได้
             </Text>
             <Button 
-              title="Set Up My Profile" 
+              title="ตั้งค่าโปรไฟล์ของฉัน" 
               onPress={handleSetupProfile} 
               style={styles.welcomeButton}
               fullWidth
@@ -56,8 +56,8 @@ export default function HomeScreen() {
               <Scan size={32} color="#fff" />
             </View>
             <View style={styles.scanTextContainer}>
-              <Text style={styles.scanTitle}>Scan a Product</Text>
-              <Text style={styles.scanSubtitle}>Check if it's safe for you</Text>
+              <Text style={styles.scanTitle}>ถ่ายสินค้า</Text>
+              <Text style={styles.scanSubtitle}>ตรวจสอบว่าปลอดภัยสำหรับคุณหรือไม่</Text>
             </View>
           </Pressable>
 
@@ -66,13 +66,13 @@ export default function HomeScreen() {
               <Search size={24} color="#fff" />
             </View>
             <View style={styles.searchTextContainer}>
-              <Text style={styles.searchTitle}>Search Products</Text>
-              <Text style={styles.searchSubtitle}>Find safe alternatives</Text>
+              <Text style={styles.searchTitle}>ค้นหาสินค้า</Text>
+              <Text style={styles.searchSubtitle}>ค้นหาสินค้าที่ปลอดภัย</Text>
             </View>
           </View>
 
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Recently Scanned</Text>
+            <Text style={styles.sectionTitle}>สินค้าล่าสุด</Text>
             {recentlyScanned.length > 0 ? (
               recentlyScanned.map((product) => (
                 <ProductCard key={product.id} product={product} />
@@ -80,11 +80,11 @@ export default function HomeScreen() {
             ) : (
               <EmptyState
                 icon={<Scan size={48} color={Colors.textLight} />}
-                title="No Recent Scans"
-                message="Products you scan will appear here for quick access."
+                title="ไม่มีสินค้าล่าสุดที่บันทึกไว้"
+                message="สินค้าที่คุณถ่ายจะปรากฏที่นี่เพื่อให้เข้าถึงได้ง่าย"
                 action={
                   <Button
-                    title="Scan a Product"
+                    title="ถ่ายสินค้า"
                     onPress={handleScanPress}
                     variant="primary"
                   />
@@ -114,7 +114,7 @@ export default function HomeScreen() {
                   You haven't added any allergens to your profile yet.
                 </Text>
                 <Button
-                  title="Add Allergens"
+                  title="เพิ่มสารก่อภูมิแพ้ของคุณ"
                   onPress={() => router.push('/profile')}
                   variant="primary"
                   size="small"
